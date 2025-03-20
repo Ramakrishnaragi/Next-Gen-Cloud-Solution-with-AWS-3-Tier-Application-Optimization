@@ -31,7 +31,7 @@ pipeline {
                         -Dsonar.projectKey=three-tier-frontend
                         -Dsonar.sources=. \
                         -Dsonar.host.url=http://54.173.249.126:9000 \
-                        -Dsonar.login=squ_427f74f9b3d6f5e8c8ce3faf811072eb4b83e398'''
+                        -Dsonar.login=1201535f0c2e4e8cce16a8b56912c278669b07c5'''
                     }
                 }
             }
