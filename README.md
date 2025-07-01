@@ -1,4 +1,4 @@
-   # 🚀 2ndWeeksofCloudOps - 3 tier Application
+   # 🚀 Next-Gen-Cloud-Solution-with-AWS-3-Tier-Application-Optimization
 
 ✨This repository is created to learn and deploy  3-tier application on aws cloud. this project contain three layer Presentation, Application and database
 
