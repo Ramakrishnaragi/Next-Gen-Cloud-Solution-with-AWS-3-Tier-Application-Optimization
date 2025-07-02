@@ -107,8 +107,8 @@ PORT=3306
  git clone https://github.com/Ramakrishnaragi/Next-Gen-Cloud-Solution-with-AWS-3-Tier-Application-Optimization.git
 	cd client
 	vi src/pages/config.js
-```
 
+# edit here:
 // // const API_BASE_URL = "http://localhost:8800";
 const API_BASE_URL = "http://ramcloud.shop"; # use here DNS
 // export default API_BASE_URL;
@@ -116,6 +116,7 @@ const API_BASE_URL = "http://ramcloud.shop"; # use here DNS
 // export default API_BASE_URL;
 // const API_BASE_URL = "REACT_APP_API_BASE_URL_PLACEHOLDER";
 export default API_BASE_URL; 
+```
 
 - then go to client directory
 - run below commands
