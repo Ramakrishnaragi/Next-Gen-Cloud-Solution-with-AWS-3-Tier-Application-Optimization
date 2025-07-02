@@ -46,7 +46,7 @@ we are following a Warm standby Disaster recovery strategy so we are going to ut
 2.create rds database in project-vpc
 3. Launch bastion host server in public subnet
 4. Launch ubuntu server in backend subnets and connect from bastion host server. Follow the steps:
- 	```sh
+```sh
 sudo apt update -y
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs -y	
@@ -56,10 +56,12 @@ corepack enable
 corepack prepare yarn@stable –activate
 sudo npm install -g pm2
 ```
+
 5. Then clone your git repo
 -	git clone https://github.com/Ramakrishnaragi/Next-Gen-Cloud-Solution-with-AWS-3-Tier-Application-Optimization.git
 - cd backend
 - vi .env (edit the .env file in bellow path if u dont have any .env file just create in below path)
+  
 ```sh
 ##### add this mater
 DB_HOST=book.rds.com #add here rds endpoint or route53 private dns
@@ -67,6 +69,7 @@ DB_USERNAME=admin	#cahnge to nyour rds user name
 DB_PASSWORD=""   # change to your rds password
 PORT=3306
 ```
+
 #  then run below command in backend directory
 - npm install
 - npm install dotenv
@@ -78,6 +81,7 @@ PORT=3306
 # Install the cloud watch agent to send the logs to cloud watch.
 **Note**: You should have nodejs installed on your system. [Node.js](https://nodejs.org/)
 6. Launch ubuntu server in frontend subnets and connect from bastion host server. Follow the steps:
+
 ```sh
 - sudo apt update -y
 - sudo apt install apache2 -y
@@ -86,20 +90,25 @@ PORT=3306
 - sudo apt update -y
 - sudo npm install -g corepack -y
 ```
+
 # # #Core modules are built-in libraries that come with the Node.js runtime. They provide essential functionality for various tasks like file handling, HTTP requests, working with stream
+
 ```sh
 - corepack enable
 - corepack prepare yarn@stable --activate
 ```
+
 #Yarn is a package manager for JavaScript projects, similar to npm (Node Package Manager). It helps developers manage dependencies (libraries and packages) required for their projects. Yarn ensures fast, reliable, and secure dependency management, making it popular among developers.
 
 - sudo npm install -g pm2
 # then clone your git repo
+
 ```sh
  git clone https://github.com/Ramakrishnaragi/Next-Gen-Cloud-Solution-with-AWS-3-Tier-Application-Optimization.git
 	cd client
 	vi src/pages/config.js
 ```
+
 // // const API_BASE_URL = "http://localhost:8800";
 const API_BASE_URL = "http://ramcloud.shop"; # use here DNS
 // export default API_BASE_URL;
@@ -110,11 +119,13 @@ export default API_BASE_URL;
 
 - then go to client directory
 - run below commands
+  
 ```sh
 npm install
 npm run build
 sudo cp -r build/* /var/www/html
 ```
+
 # Install the cloud watch agent to send the logs to cloud watch. Here write python code in lambda and integrate event bridge, when the logs are reached to cloud watch immediately the event bridge will be triggered and executes the lambda and move the logs files to s3 for cost optimization.
 
 # Create a Target groups for frontend and backend servers
